@@ -163,12 +163,18 @@ body {
   100% {
     transform: translate(-51%, -54.5%) scale(1); } }
 
-#particles-div {
+.particles {
+  width: 100%;
+  height: 100%;
+}
+
+.particles__div {
   grid-column: full-start / col-end 4;
   grid-row: 1 / 2;
   z-index: 1;
   opacity: 0;
-  transition: all 1.5s linear; }
+  transition: all 1.5s linear; 
+  }
 
 .dark {
   background-color: #333333;
@@ -203,7 +209,7 @@ body {
     font-size: 1.1rem;
     font-weight: 300;
     opacity: 0.8;
-    /* transform: scaleX(0);TODO */
+    transform: scaleX(0);
     transform-origin: 0% 0%;
     transition: all 0.2s ease-out; }
     @media only screen and (max-width: 56.25em) {
@@ -220,7 +226,7 @@ body {
         transform-origin: 0% 0%;
         letter-spacing: 3px; } }
   .logo__icon {
-    /* background-image: url(../assets/R.png); */
+    background-image: url(./R.png);
     background-position: center;
     background-size: cover;
     width: 2.4rem;
@@ -270,7 +276,7 @@ body {
   width: 70%;
   grid-column: 3 / 4;
   grid-row: 4 / 5;
-  /* display: none; TODO */
+  display: none; 
   transition: all 0.3s;
   z-index: 2;
   cursor: pointer; }
@@ -447,54 +453,54 @@ body {
       .gallery__image {
         width: 27rem;
         height: 17rem; } }
-    /* .gallery__image--1 { */
-      /* background-image: url(../assets/Pidgy-bw.png); } */
-      /* .gallery__image--1:hover { */
-        /* background-image: url(../assets/Pidgy.png); } */
-    /* .gallery__image--2 { */
-      /* background-image: url(../assets/Promvote-bw.png); } */
-      /* .gallery__image--2:hover { */
-        /* background-image: url(../assets/Promvote.png); } */
-    /* .gallery__image--3 { */
-      /* background-image: url(../assets/instrusync-bw.png); } */
-      /* .gallery__image--3:hover { */
-        /* background-image: url(../assets/instrusync.png); } */
-    /* .gallery__image--4 { */
-      /* background-image: url(../assets/Natours-bw.png); } */
-      /* .gallery__image--4:hover { */
-        /* background-image: url(../assets/Natours.png); } */
-    /* .gallery__image--5 { */
-      /* background-image: url(../assets/Trillo-bw.png); } */
-      /* .gallery__image--5:hover { */
-        /* background-image: url(../assets/Trillo.png); } */
-    /* .gallery__image--6 { */
-      /* background-image: url(../assets/Nexter-bw.png); } */
-      /* .gallery__image--6:hover { */
-        /* background-image: url(../assets/Nexter.png); } */
-    /* .gallery__image--7 { */
-      /* background-image: url(../assets/Colors-bw.png); } */
-      /* .gallery__image--7:hover { */
-        /* background-image: url(../assets/Colors.png); } */
-    /* .gallery__image--8 { */
-      /* background-image: url(../assets/Natourer-bw.png); } */
-      /* .gallery__image--8:hover { */
-        /* background-image: url(../assets/Natourer.png); } */
-    /* .gallery__image--9 { */
-      /* background-image: url(../assets/Cubo-bw.png); } */
-      /* .gallery__image--9:hover { */
-        /* background-image: url(../assets/Cubo.png); } */
-    /* .gallery__image--10 { */
-      /* background-image: url(../assets/PayPal-bw.png); } */
-      /* .gallery__image--10:hover { */
-        /* background-image: url(../assets/PayPal.png); } */
-    /* .gallery__image--11 { */
-      /* background-image: url(../assets/Yosemite-bw.png); } */
-      /* .gallery__image--11:hover { */
-        /* background-image: url(../assets/Yosemite.png); } */
-    /* .gallery__image--12 { */
-      /* background-image: url(../assets/TrustHyre-bw.png); } */
-      /* .gallery__image--12:hover { */
-        /* background-image: url(../assets/TrustHyre.png); } */
+    .gallery__image--1 {
+      background-image: url(./Pidgy-bw.png); }
+      .gallery__image--1:hover {
+        background-image: url(./Pidgy.png); }
+    .gallery__image--2 {
+      background-image: url(./PromVote-bw.png); }
+      .gallery__image--2:hover {
+        background-image: url(./PromVote.png); }
+    .gallery__image--3 {
+      background-image: url(./instrusync-bw.png); }
+      .gallery__image--3:hover {
+        background-image: url(./instrusync.png); }
+    .gallery__image--4 {
+      background-image: url(./Natours-bw.png); }
+      .gallery__image--4:hover {
+        background-image: url(./Natours.png); }
+    .gallery__image--5 {
+      background-image: url(./Trillo-bw.png); }
+      .gallery__image--5:hover {
+        background-image: url(./Trillo.png); }
+    .gallery__image--6 {
+      background-image: url(./Nexter-bw.png); }
+      .gallery__image--6:hover {
+        background-image: url(./Nexter.png); } 
+    .gallery__image--7 {
+      background-image: url(./Colors-bw.png); }
+      .gallery__image--7:hover {
+        background-image: url(./Colors.png); }
+    .gallery__image--8 {
+      background-image: url(./Natourer-bw.png); }
+      .gallery__image--8:hover {
+        background-image: url(./Natourer.png); }
+    .gallery__image--9 {
+      background-image: url(./Cubo-bw.png); }
+      .gallery__image--9:hover {
+        background-image: url(./Cubo.png); }
+    .gallery__image--10 {
+      background-image: url(./PayPal-bw.png); }
+      .gallery__image--10:hover {
+        background-image: url(./PayPal.png); }
+    .gallery__image--11 {
+      background-image: url(./Yosemite-bw.png); }
+      .gallery__image--11:hover {
+        background-image: url(./Yosemite.png); }
+    .gallery__image--12 {
+      background-image: url(./TrustHyre-bw.png); }
+      .gallery__image--12:hover {
+        background-image: url(./TrustHyre.png); } 
   .gallery__title {
     cursor: pointer;
     position: relative; }
@@ -622,8 +628,8 @@ body {
   width: 30rem;
   height: 60rem;
   /* TODO the line below */
-  z-index: 2;
-  /* visibility: hidden; */
+  z-index: 0;
+  visibility: hidden;
   position: absolute;
   top: 6rem;
   right: 8rem;
@@ -649,7 +655,7 @@ body {
     position: absolute;
     top: 6rem;
     transform: translateX(50%);
-    right: 50vw;
+    right: 50%;
     z-index: 3; }
     @media only screen and (max-width: 75em) {
       .guide--large {
@@ -697,7 +703,7 @@ body {
     border-radius: 2rem;
     box-shadow: 0 0.8rem 1.5rem rgba(51, 51, 51, 0.32);
     transform-origin: calc(100% - 3rem) 3rem;
-    /* transform: scale(0) TODO; */
+    transform: scale(0);
     transition: all 0.5s cubic-bezier(0.86, 0, 0.07, 1);
     z-index: 1000; }
     @media only screen and (max-width: 37.5em) {
@@ -711,7 +717,8 @@ body {
     .guide__cont--border {
       border: 1rem solid #ffaa00; }
   .guide__header {
-    justify-self: center; }
+    justify-self: center;
+  text-align: center; }
     @media only screen and (max-width: 25.57em) {
       .guide__header {
         font-size: 7.5rem; } }
