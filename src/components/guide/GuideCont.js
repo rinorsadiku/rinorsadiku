@@ -13,6 +13,7 @@ class GuideContainer extends React.Component {
 
 	state = {
 		content: guideContent[0],
+		clicked: 1,
 		large: false
 	};
 
@@ -33,11 +34,15 @@ class GuideContainer extends React.Component {
 	};
 
 	animateCartoon = () => {
+		if (this.state.clicked > 1) return;
+
 		// Set the animation to true
 		this.props.setAnimate();
 
 		// Invoke the function in the funcitonality class to animate the cartoon with the state as an argument
 		this.context.animateCartoon(true);
+
+		this.setState({ clicked: 2 });
 	};
 
 	handleChange = async (index = null) => {
