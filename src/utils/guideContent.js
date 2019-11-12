@@ -9,7 +9,7 @@ export default [
 		header: 'Myself',
 		text:
 			"The man in the middle? That's me! Want to learn more... You are one click away.",
-		button: 'Get to know'
+		button: 'Know me more'
 	},
 	{
 		header: '"Masterpieces"',

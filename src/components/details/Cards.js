@@ -18,11 +18,11 @@ class Cards extends React.Component {
 					<SvgPassion />
 					<h4 className="card__title">Passion</h4>
 					<p className="card__text">
-						The passion that I have for this thing truly trumps
-						everything in my life. Just the ability to create
-						something out of nothing has lit that fire... and it
-						doesn't seem to be going away. The sky really is the
-						limit.
+						The passion for this thing truly trumps
+						everything in my life. The sky really is the limit when it comes to
+						development and having practiced this craft, and still doing so,
+						certainly gave me the ability of putting forth
+						the best product and solution to everyone.
 					</p>
 				</div>
 				<div ref={this.context.integrity} className="card card--2">
@@ -49,21 +49,20 @@ class Cards extends React.Component {
 					<SvgCommitment />
 					<h4 className="card__title">Commitment</h4>
 					<p className="card__text">
-						Staying on course and learning new things is no easy
-						task. Almost everything requires determination, an open
-						mind for improvements and most importantly commitment to
-						finish what you started.
+						Staying on course and continually getting better is no easy
+						task. Being commited to what you once made a decision is truly a must,
+						and having that sort of discipline in the bag is one of the things
+						that I certainly take pride in.
 					</p>
 				</div>
 				<div ref={this.context.problem} className="card card--5">
 					<SvgProblem />
 					<h4 className="card__title">Problem Solving</h4>
 					<p className="card__text">
-						Each project has it's own challenges and trials and
-						tribulations to go through that requireds quite the thinking
-						out the box and coming up with efficient and scalable
-						solutions. That need fortified the problem solving nature as a
-						developer.
+						Developing custom projects always requires thinking out
+						the box and coming up with efficient and scalable solutions.
+						Having that in mind, the constant practice of really rubbed off the
+						problem-solving nature as a developer.
 					</p>
 				</div>
 			</div>

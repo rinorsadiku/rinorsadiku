@@ -1,7 +1,7 @@
 export const tooltips = [
-	'These are some authentic projects that were made using the skills acquired throughout the years of tasting and learning.',
-	'These are recreational projects that were made in different courses and seminars with the help and supervision of true proffessionals, which truly made me a better developer.',
-	'These are design projects. Their only purpose was to bring different concepts and inspirations to life. A great way to train the eye.'
+	'These are some authentic projects that were made using the skills and experience acquired throughout the years of learning.',
+	'These are recreational projects that were made in different courses and seminars with the help and supervision of true proffessionals.',
+	'These are design projects. Their only purpose was to bring different concepts and inspirations to life.'
 ];
 
 export const galleryItems = [
