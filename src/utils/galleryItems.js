@@ -75,7 +75,7 @@ export const galleryItems = [
 				svg: 2,
 				position: 'top',
 				link: '#',
-				title: 'Natourer'
+				title: 'Photourer'
 			},
 			{
 				image: '9',

@@ -18,16 +18,18 @@ class GuideContentLarge extends React.Component {
 		});
 	};
 
-	changeContent = () => {
+	changeContent = async () => {
 		// Disappear content
-		this.context.disappear(this.context.guideContent);
+		await this.context.disappear(this.context.guideContent);
 
 		if (this.state.contentIndex === 0)
-			return this.setState({ contentIndex: 1 }, () =>
-				this.context.appear(this.context.guideContent)
+			return this.setState(
+				{ contentIndex: 1 },
+				async () => await this.context.appear(this.context.guideContent)
 			);
-		this.setState({ contentIndex: 0 }, () =>
-			this.context.appear(this.context.guideContent)
+		this.setState(
+			{ contentIndex: 0 },
+			async () => await this.context.appear(this.context.guideContent)
 		);
 	};
 

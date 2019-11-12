@@ -16,16 +16,7 @@ class Guide extends React.Component {
 					ref={this.context.guideCheck}
 				/>
 
-				<label
-					ref={this.context.guideToggle}
-					onClick={this.context.toggleGuide}
-					className="guide__toggle"
-					htmlFor="guide-toggle"
-				>
-					<span className="guide__toggle-icon">&nbsp;</span>
-				</label>
-
-				<GuideCont />
+				<GuideCont setAnimate={this.props.setAnimate} toggleMorph={this.props.toggleMorph} />
 			</div>
 		);
 	}
