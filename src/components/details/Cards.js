@@ -61,7 +61,7 @@ class Cards extends React.Component {
 					<p className="card__text">
 						Developing custom projects always requires thinking out
 						the box and coming up with efficient and scalable solutions.
-						Having that in mind, the constant practice of really rubbed off the
+						Having that in mind, the constant practice of it really rubbed off the
 						problem-solving nature as a developer.
 					</p>
 				</div>
