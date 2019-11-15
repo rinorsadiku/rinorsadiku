@@ -117,8 +117,8 @@ body {
   height: 3px;
   background-color: #ffaa00;
   position: absolute;
-  visibility: hidden;
-  transform: scaleY(0);
+  bottom: -2.5px;
+  transform: scaleY(.5);
   transform-origin: left start;
   transition: 0.2s ease-out; }
 
