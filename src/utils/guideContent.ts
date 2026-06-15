@@ -1,4 +1,10 @@
-export default [
+export interface GuideSlide {
+	header: string;
+	text: string;
+	button: string;
+}
+
+const guideContent: GuideSlide[] = [
 	{
 		header: 'Movement',
 		text:
@@ -17,3 +23,5 @@ export default [
 		button: 'Look them up'
 	}
 ];
+
+export default guideContent;

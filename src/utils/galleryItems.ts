@@ -1,10 +1,24 @@
-export const tooltips = [
+export interface GalleryItem {
+	image: string;
+	symbol: string;
+	svg: number;
+	position: string;
+	link: string;
+	title: string;
+}
+
+export interface GalleryGroup {
+	button: string;
+	items: GalleryItem[];
+}
+
+export const tooltips: string[] = [
 	'These are some authentic projects that were made using the skills and experience acquired throughout the years of learning.',
 	'These are recreational projects that were made in different courses and seminars with the help and supervision of true proffessionals.',
 	'These are design projects. Their only purpose was to bring different concepts and inspirations to life.'
 ];
 
-export const galleryItems = [
+export const galleryItems: GalleryGroup[] = [
 	{
 		button: 'Show more',
 		items: [

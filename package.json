@@ -2,24 +2,29 @@
 	"name": "rinorsadiku",
 	"version": "0.1.0",
 	"private": true,
-	"dependencies": {
-		"flubber": "^0.4.2",
-		"polymorph-js": "^1.0.2",
-		"react": "^16.10.2",
-		"react-dom": "^16.10.2",
-		"react-particles-js": "^2.7.0",
-		"react-scripts": "3.2.0",
-		"react-spring": "^8.0.27",
-		"react-transition-group": "^4.3.0"
-	},
+	"type": "module",
 	"scripts": {
-		"start": "react-scripts start",
-		"build": "react-scripts build",
-		"test": "react-scripts test",
-		"eject": "react-scripts eject"
+		"dev": "vite",
+		"start": "vite",
+		"build": "tsc --noEmit && vite build",
+		"preview": "vite preview",
+		"typecheck": "tsc --noEmit"
 	},
-	"eslintConfig": {
-		"extends": "react-app"
+	"dependencies": {
+		"@react-spring/web": "^10.1.1",
+		"@tsparticles/engine": "^3.8.1",
+		"@tsparticles/react": "^3.0.0",
+		"@tsparticles/slim": "^3.8.1",
+		"flubber": "^0.4.2",
+		"react": "^19.1.0",
+		"react-dom": "^19.1.0"
+	},
+	"devDependencies": {
+		"@types/react": "^19.1.0",
+		"@types/react-dom": "^19.1.0",
+		"@vitejs/plugin-react": "^4.3.4",
+		"typescript": "^5.7.3",
+		"vite": "^6.0.7"
 	},
 	"browserslist": {
 		"production": [

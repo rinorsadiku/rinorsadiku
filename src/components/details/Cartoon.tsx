@@ -1,11 +1,14 @@
-import React from 'react';
+import { useContext } from 'react';
 import FunctionalityContext from '../../contexts/FunctionalityContext';
 
-class Cartoon extends React.Component {
-	static contextType = FunctionalityContext;
+interface CartoonProps {
+	animate: boolean;
+}
 
-	render() {
-		return (
+const Cartoon = ({ animate }: CartoonProps) => {
+	const functionality = useContext(FunctionalityContext);
+
+	return (
 			<svg
 				className="cartoon"
 				width="307"
@@ -16,58 +19,58 @@ class Cartoon extends React.Component {
 				xmlnsXlink="http://www.w3.org/1999/xlink"
 			>
 				<rect
-					ref={this.context.rightTop}
+					ref={functionality.rightTop}
 					x="102"
 					width="202"
 					height="333"
 					fill="url(#pattern0)"
 					onMouseOver={() =>
-						this.context.appearQuality(this.props.animate, this.context.integrity)
+						functionality.appearQuality(animate, functionality.integrity)
 					}
 					onMouseLeave={() => {
-						this.context.removeQuality(this.props.animate, this.context.integrity)
+						functionality.removeQuality(animate, functionality.integrity)
 					}}
 				/>
 
 				<rect
-					ref={this.context.torso}
+					ref={functionality.torso}
 					x="22"
 					y="391"
 					width="257"
 					height="142"
 					fill="url(#pattern1)"
 					onMouseOver={() =>
-						this.context.appearQuality(this.props.animate, this.context.problem)
+						functionality.appearQuality(animate, functionality.problem)
 					}
 					onMouseLeave={() => {
-						this.context.removeQuality(this.props.animate, this.context.problem)
+						functionality.removeQuality(animate, functionality.problem)
 					}}
 				/>
 				<rect
-					ref={this.context.leftTop}
+					ref={functionality.leftTop}
 					y="2"
 					width="145"
 					height="298"
 					fill="url(#pattern2)"
 					onMouseOver={() =>
-						this.context.appearQuality(this.props.animate, this.context.passion)
+						functionality.appearQuality(animate, functionality.passion)
 					}
 					onMouseLeave={() => {
-						this.context.removeQuality(this.props.animate, this.context.passion)
+						functionality.removeQuality(animate, functionality.passion)
 					}}
 				/>
 				<rect
-					ref={this.context.rightBottom}
+					ref={functionality.rightBottom}
 					x="121"
 					y="279"
 					width="186"
 					height="155"
 					fill="url(#pattern3)"
 					onMouseOver={() =>
-						this.context.appearQuality(this.props.animate, this.context.commitment)
+						functionality.appearQuality(animate, functionality.commitment)
 					}
 					onMouseLeave={() => {
-						this.context.removeQuality(this.props.animate, this.context.commitment)
+						functionality.removeQuality(animate, functionality.commitment)
 					}}
 				/>
 				<path
@@ -76,17 +79,17 @@ class Cartoon extends React.Component {
 					fillOpacity="0.47"
 				/>
 				<rect
-					ref={this.context.leftBottom}
+					ref={functionality.leftBottom}
 					x="7"
 					y="283"
 					width="153"
 					height="182"
 					fill="url(#pattern4)"
 					onMouseOver={() =>
-						this.context.appearQuality(this.props.animate, this.context.value)
+						functionality.appearQuality(animate, functionality.value)
 					}
 					onMouseLeave={() => {
-						this.context.removeQuality(this.props.animate, this.context.value)
+						functionality.removeQuality(animate, functionality.value)
 					}}
 				/>
 				<path
@@ -182,8 +185,7 @@ class Cartoon extends React.Component {
 					/>
 				</defs>
 			</svg>
-		);
-	}
-}
+	);
+};
 
 export default Cartoon;

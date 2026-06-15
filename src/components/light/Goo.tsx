@@ -1,17 +1,21 @@
-import React from 'react';
-import { useTrail, animated } from 'react-spring';
+import { useTrail, animated } from '@react-spring/web';
 
 const fast = { tension: 1200, friction: 40 };
 const slow = { mass: 10, tension: 200, friction: 50 };
-const trans = (x, y) => `translate3d(${x}px,${y}px,0) translate3d(-50%,-50%,0)`;
+const trans = (x: number, y: number) =>
+	`translate3d(${x}px,${y}px,0) translate3d(-50%,-50%,0)`;
 
-export default props => {
-	const [trail, set] = useTrail(3, () => ({
+interface GooProps {
+	show: boolean;
+}
+
+const Goo = ({ show }: GooProps) => {
+	const [trail, api] = useTrail(3, (i) => ({
 		xy: [window.innerWidth / 4 - 120, window.innerHeight / 2],
-		config: i => (i === 0 ? fast : slow)
+		config: i === 0 ? fast : slow
 	}));
 
-	if (!props.show) return '';
+	if (!show) return null;
 
 	return (
 		<div className="goo__container">
@@ -44,17 +48,21 @@ export default props => {
 			</svg>
 			<div
 				className="hooks-main"
-				onMouseMove={e =>
-					set({ xy: [e.clientX - window.innerWidth / 2, e.clientY] })
+				onMouseMove={(e) =>
+					api.start({
+						xy: [e.clientX - window.innerWidth / 2, e.clientY]
+					})
 				}
 			>
-				{trail.map((props, index) => (
+				{trail.map((style, index) => (
 					<animated.div
 						key={index}
-						style={{ transform: props.xy.interpolate(trans) }}
+						style={{ transform: style.xy.to(trans) }}
 					/>
 				))}
 			</div>
 		</div>
 	);
 };
+
+export default Goo;
